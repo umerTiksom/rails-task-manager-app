@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: rgb(207, 207, 166);
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 8px;
+  background-color: black;
+}
+nav a {
+  color: white;
+  padding: 5px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+/* app/assets/stylesheets/tasks.css */
+
+.task_table {
+  width: 100%;
+  border-collapse: separate;
+  margin-top: 20px;
+}
+
+.task_table th,
+.task_table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.task_table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}

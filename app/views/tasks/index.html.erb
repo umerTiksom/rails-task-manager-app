@@ -2,12 +2,7 @@
   <%= render partial:"task" %>
   <br>
   <h1>Task with depending status</h1>
+  <%# rendering the partial using local variable  %>
   <%@task.each do |t|%>
-    <% if t.status == "pending" %>
-      <p><%= t.tittle%></p>
-      <p><%=t.status%></p>
-    <% elsif t.status == "completed" %>
-      <p><%= t.tittle%></p>
-      <p><%=t.status%></p>
-    <% end %>
+    <%= render partial:"task_status_check", locals: { task: t } %>
   <%end%>

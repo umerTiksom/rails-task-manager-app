@@ -6,6 +6,15 @@ class TasksController < ApplicationController
     @task=Task.find(params[:id])
    end
    def new
-   redirect_to root_path
+   @task=Task.new
    end
+   def create
+    @task= Task.new(
+      tittle: params[:task][:tittle],
+      status: params[:task][:status]
+    )
+    if @task.save
+      redirect_to tasks_path
+    end
+  end
 end

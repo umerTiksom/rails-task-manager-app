@@ -1,11 +1,11 @@
-<% content_for :title, "New task" %>
-
-<h1>New task</h1>
-
-<%= render "form", task: @task %>
-
-<br>
-
-<div>
-  <%= link_to "Back to tasks", tasks_path %>
-</div>
+<%= form_with model: @task do |form|%>
+  <div class="demo">
+    <%= form.label :tittle, "Tittle" %>
+    <%= form.text_area :tittle%>
+  </div>
+  <div class="demo">
+    <%= form.label :status, "Status" %>
+    <%= form.text_area :status %>
+  </div>
+  <%= form.submit %>
+<% end %>

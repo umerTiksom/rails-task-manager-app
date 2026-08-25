@@ -1,0 +1,7 @@
+<% if task.status == "pending" %>
+  <p><%= task.tittle%></p>
+  <p><%=task.status%></p>
+<% elsif task.status == "completed" %>
+  <p><%= task.tittle%></p>
+  <p><%=task.status%></p>
+<%end%>

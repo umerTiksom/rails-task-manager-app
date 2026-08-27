@@ -7,5 +7,20 @@
     <%= form.label :status, "Status" %>
     <%= form.text_area :status %>
   </div>
+  <div class="demo2">
+    <%= form.label  :priority %>
+    <div>
+    <%= form.radio_button :priority, "high" %>
+    <%= form.label :priority_high, "high" %>
+    </div>
+    <div>
+      <%= form.radio_button :priority, "medium" %>
+    <%= form.label :priority_medium, "medium" %>
+    </div>
+    <div>
+      <%= form.radio_button :priority, "low" %>
+    <%= form.label :priority_low, "Low" %>
+    </div>
+  </div>
   <%= form.submit %>
 <% end %>
